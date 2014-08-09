@@ -1,0 +1,94 @@
+addi $a1 $zero 1
+jal new
+addi $t3 $zero 3 
+addi $t4 $zero 4 
+addi $t8 $zero 8 
+addi $t6 $zero 6 
+addi $t9 $zero 9 
+addi $s1 $zero 1
+j exit
+new: addi $a2 $zero 2
+addi $a2 $zero 2
+addi $a2 $zero 2
+addi $a2 $zero 2
+addi $a2 $zero 2
+addi $a2 $zero 2
+jr $ra
+exit: addi $s2 $zero 2
+
+sw $a1 0($a0)
+
+
+
+addi $t1 $zero 2
+addi $t2 $zero 5
+
+PROGRAM 1
+addi $v0 $zero 255
+addi $t3 $zero 1
+addi $t4 $zero 128
+addi $a1 $zero 5
+addi $t0 $zero 1
+ori $s0 $zero 5
+loop: add $t1 $t1 $t0
+andi $t6 $t4 255
+and $t7 $t3 $v0
+add $s1 $s1 $zero
+or $t8 $a1 $zero
+nor $v1 $zero $zero
+sub $t2 $t2 $t0
+sll $t3 $t3 1
+sub $a1 $a1 $t0
+addi $ra $ra 0
+addi $ra $ra 0
+addi $ra $ra 0
+srl $t4 $t4 1
+slt $t5 $a1 $t0
+addi $ra $ra 0
+addi $ra $ra 0
+addi $ra $ra 0
+beq $t5 $zero loop
+
+
+PROGRAM 2
+
+addi $a1 $zero 1
+jal new
+addi $t3 $zero 3 
+addi $t4 $zero 4 
+addi $t8 $zero 8 
+addi $t6 $zero 6 
+addi $t9 $zero 9 
+addi $s1 $zero 1
+j exit
+new: addi $a2 $zero 2
+addi $a3 $zero 2
+addi $t0 $zero 2
+addi $t1 $zero 2
+addi $t2 $zero 2
+addi $t5 $zero 2
+jr $ra
+exit: addi $s2 $zero 2
+
+PROGRAM 3
+
+addi $a0 $zero 4
+addi $a1 $zero 169
+addi $t1 $zero 5
+addi $t2 $zero 10 
+addi $t3 $zero 1
+addi $t4 $zero 20
+loop: addi $t5 $zero 21
+addi $t5 $zero 169
+addi $t6 $zero 169
+addi $t6 $zero 34
+sw $a1 0($a0)
+sub $t2 $t2 $t3 
+addi $t8 $t8 1
+addi $v1 $v1 1
+addi $t5 $zero 49
+addi $t6 $zero 145
+addi $t5 $zero 134
+addi $t6 $zero 123
+lw $v0 0($a0)
+bne $t2 $zero loop

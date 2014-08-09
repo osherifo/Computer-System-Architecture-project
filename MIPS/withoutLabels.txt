@@ -1,0 +1,17 @@
+addi $a1 $zero 1
+jal new
+addi $t3 $zero 3 
+addi $t4 $zero 4 
+addi $t8 $zero 8 
+addi $t6 $zero 6 
+addi $t9 $zero 9 
+addi $s1 $zero 1
+j exit
+addi $a2 $zero 2
+addi $a2 $zero 2
+addi $a2 $zero 2
+addi $a2 $zero 2
+addi $a2 $zero 2
+addi $a2 $zero 2
+jr $ra
+addi $s2 $zero 2
